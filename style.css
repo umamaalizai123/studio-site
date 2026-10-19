@@ -1,0 +1,47 @@
+/* Colour variables (placeholders, you'll change these after your meeting) */
+:root {
+  --color-main: #12343b;
+  --color-accent: #f2c14e;
+  --color-bg: #f3f7f6;
+  --color-text: #1c2b2e;
+  --color-card: #ffffff;
+}
+
+/* Makes padding and borders count inside an element's width */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: var(--color-main);
+}
+
+.logo {
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
