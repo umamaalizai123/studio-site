@@ -1,4 +1,4 @@
-# studio-site
+# Aafiyat Pilates
 
 A responsive single-page website for a fitness studio, built with plain HTML5 and CSS3 (no frameworks).
 
