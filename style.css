@@ -25,4 +25,30 @@ h1, h2, h3 {
 
 html {
   scroll-behavior: smooth;
+} 
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background: var(--color-main);
+}
+
+.logo {
+  color: white;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
 }
