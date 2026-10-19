@@ -79,3 +79,112 @@ html {
 .site-footer p {
   margin: 0;
 }
+.card {
+  background: var(--color-card);
+  border: 1px solid #cfdcda;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.trainer-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.trainer {
+  flex: 1 1 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.trainer h3 {
+  margin: 0 0 0.25rem;
+}
+
+.trainer p {
+  margin: 0 0 0.5rem;
+}
+
+.role {
+  font-weight: 600;
+}
+
+.avatar {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  background: var(--color-main);
+  color: var(--color-accent);
+  font-weight: 800;
+}
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+  gap: 1.5rem;
+}
+
+.tier {
+  display: flex;
+  flex-direction: column;
+}
+
+.tier h3 {
+  margin: 0 0 0.5rem;
+}
+
+.tier ul {
+  flex: 1;
+  list-style: none;
+  margin: 0 0 1.5rem;
+  padding: 0;
+}
+
+.tier li {
+  padding: 0.35rem 0;
+  border-bottom: 1px solid #cfdcda;
+}
+
+.price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-main);
+  margin: 0 0 1rem;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.featured {
+  border: 3px solid var(--color-accent);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  background: var(--color-accent);
+  color: var(--color-main);
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  border: 2px solid var(--color-accent);
+  border-radius: 6px;
+}
+
+.btn-outline {
+  background: transparent;
+  border-color: var(--color-main);
+}
+
+.btn:hover,
+.btn:focus-visible {
+  outline: 3px solid var(--color-main);
+  outline-offset: 2px;
+}
