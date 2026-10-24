@@ -1,0 +1,38 @@
+export const trainers = [
+  {
+    id: 1,
+    name: 'Amina Khalid',
+    role: 'Reformer and mat',
+    bio: 'Certified pilates instructor who focuses on core strength and good posture.',
+    photo: '/images/amina.jpg',
+    alt: 'Amina Khalid exercising on a reformer',
+    position: 'object-top',
+  },
+  {
+    id: 2,
+    name: 'Layla Siddiqui',
+    role: 'Barre fusion',
+    bio: 'Blends ballet-inspired moves with pilates for long, strong lines.',
+    photo: '/images/layla.jpg',
+    alt: 'Layla Siddiqui lying on a reformer with her arms raised',
+    position: 'object-center',
+  },
+  {
+    id: 3,
+    name: 'Noor Hassan',
+    role: 'Prenatal and postnatal',
+    bio: 'Gentle, supportive sessions for mums-to-be and new mums.',
+    photo: '/images/noor.jpg',
+    alt: 'Noor Hassan smiling with her hands together in greeting',
+    position: 'object-top',
+  },
+  {
+    id: 4,
+    name: 'Zara Ali',
+    role: 'Stretch and release',
+    bio: 'Slow, mindful classes to ease tension and improve flexibility.',
+    photo: '/images/zara.jpg',
+    alt: 'Zara Ali stretching her arm in a studio with mirrors',
+    position: 'object-[50%_25%]',
+  },
+]
