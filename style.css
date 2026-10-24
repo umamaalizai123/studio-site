@@ -242,3 +242,6 @@ h1, h2, h3 {
 .day {
   border-radius: 12px;
 }
+.zara-photo {
+  object-position: center 25%;
+}
