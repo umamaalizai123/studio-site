@@ -1,1 +1,7 @@
 @import "tailwindcss";
+@theme {
+  --color-berry: #7a3b4c;
+  --color-rosegold: #e6b3a6;
+  --color-blush: #fdf3f1;
+  --color-ink: #3d2a2e;
+}
