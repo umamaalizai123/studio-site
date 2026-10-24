@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import Hero from './components/Hero'
+import ClassesSection from './components/ClassesSection'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -8,9 +9,7 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <section id="schedule" className="px-[5%] py-12">
-          <h2 className="text-2xl font-bold text-berry">Class schedule</h2>
-        </section>
+        <ClassesSection />
       </main>
       <Footer />
     </div>
