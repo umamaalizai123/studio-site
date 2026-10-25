@@ -4,6 +4,7 @@ import ClassesSection from './components/ClassesSection'
 import Gallery from './components/Gallery'
 import TrainersSection from './components/TrainersSection'
 import Footer from './components/Footer'
+import MembershipSection from './components/MembershipSection'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
         <ClassesSection />
         <Gallery />
         <TrainersSection />
+         <MembershipSection />
       </main>
       <Footer />
     </div>
