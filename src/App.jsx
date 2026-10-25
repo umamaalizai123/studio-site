@@ -12,9 +12,9 @@ export default function App() {
       <Header />
       <main>
         <Hero />
-        <ClassesSection />
-        <Gallery />
-        <TrainersSection />
+         <ClassesSection />
+         <Gallery />
+         <TrainersSection />
          <MembershipSection />
       </main>
       <Footer />

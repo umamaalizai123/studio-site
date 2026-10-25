@@ -3,7 +3,7 @@ export default function Hero() {
     <section id="top">
       <div className="relative">
         <img
-          src="/images/hero.jpg"
+          src="/images/hero-new.jpg"
           alt="Aafiyat Pilates studio with pink reformer beds. Stronger body, calmer mind, a healthier you."
           className="block h-auto w-full"
         />
