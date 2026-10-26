@@ -1,41 +1,74 @@
 # Aafiyat Pilates
 
-A responsive single-page website for a women's pilates studio. It shows a class schedule, studio photos, instructor cards and membership tiers.
+A responsive website for a women's pilates studio, with a class schedule, instructor cards and membership tiers.
 
-This project has two versions:
+## Versions
 
-- **Assignment 1:** plain HTML5 and CSS3, using Flexbox and Grid. It is saved under the Git tag `assignment-1`.
-- **Assignment 2 (current):** rebuilt with React, Vite and Tailwind CSS.
+- **Assignment 1:** plain HTML5 and CSS3 (tag `assignment-1`)
+- **Assignment 2:** React, Vite and Tailwind (tag `assignment-2`)
+- **Assignment 3 (current):** Express API, Postgres on Neon, and authentication with Better Auth
 
-## How to run it
+## Structure
 
-1. Install Node.js (version 20.19 or newer).
-2. In the project folder, run:
-npm install
-npm run dev
+```
+client/    React + Tailwind frontend
+server/    Express API, database connection, seed script, auth setup
+```
 
-3. Open the link it prints, usually `http://localhost:5173`.
+## Running it locally
 
-## What I built
+1. Create `server/.env` with these variables (never commit this file):
 
-- **Class filter:** buttons filter the schedule by class type (All, Reformer, Mat, Stretch, Barre, Prenatal), using `useState`.
-- **Spots stepper:** a small controlled component on every class card. The parent component owns the numbers, so the total reserved spots updates and reservations survive when the filter changes.
-- **Components:** Header, Hero, ClassesSection, Gallery, TrainersSection, MembershipSection and Footer, each in its own file.
-- **Data files:** classes, trainers and memberships are arrays of objects, rendered with `.map()`.
-- **Tailwind CSS:** styled mobile-first, with unprefixed classes for phones and `sm:`, `md:` and `lg:` for larger screens. No horizontal scroll at any size.
+```
+   DATABASE_URL=your Neon connection string
+   AUTH_SECRET=a random string of at least 32 characters
+```
 
-## Folder structure
-public/images/ photos and banner image
-src/components/ React components
-src/data/ data files (classes, trainers, memberships)
-src/App.jsx page layout
-src/index.css Tailwind import and colour theme
+2. Install and seed the database:
+
+```
+   cd server
+   npm install
+   npm run seed
+```
+
+3. Start the API:
+
+```
+   npm run dev
+```
+
+4. In a second terminal, start the website:
+
+```
+   cd client
+   npm install
+   npm run dev
+```
+
+5. Open `http://localhost:5173`.
+
+## Database
+
+- `classes`: name, day, time, type, instructor, spots
+- `trainers`: name, role, bio, photo, alt text, photo position
+- `memberships`: name, price, period, perks, featured
+- `user`, `session`, `account`, `verification`: created by Better Auth
+
+## Done so far
+
+- Class filter built with `useState`
+- Spots stepper as a controlled component
+- API routes for classes, trainers and memberships
+- React fetches live data from the API
+- Better Auth configured on the server
+
+## Still to do
+
+- Booking feature to reserve a spot, saved in the database
+- Signup, login and logout screens in React
+- Deploy the API and the website
 
 ## Notes
 
-- Photos are stock images from free sources, and the instructor names and bios are placeholders. They are not real people.
-- This is a front-end project. The data is hardcoded, and the reserve buttons do not save bookings.
-
-## Built by
-
-Ummama Alizai, as part of an individual project.
+Photos are stock images and the instructor names and bios are placeholders. They are not real people.
