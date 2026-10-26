@@ -1,12 +1,23 @@
 import 'dotenv/config'
 import express from 'express'
 import cors from 'cors'
+import { toNodeHandler } from 'better-auth/node'
+import { auth } from './auth.js'
 import { pool } from './db.js'
 
 const app = express()
+const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173'
 
-app.use(cors({ origin: 'http://localhost:5173' }))
+app.use(cors({ origin: clientUrl, credentials: true }))
+
+// Better Auth handler: must be before express.json()
+app.all('/api/auth/*splat', toNodeHandler(auth))
+
 app.use(express.json())
+
+app.get('/', (req, res) => {
+  res.json({ message: 'Aafiyat Pilates API is running' })
+})
 
 app.get('/api/health', async (req, res) => {
   try {
@@ -17,6 +28,7 @@ app.get('/api/health', async (req, res) => {
     res.status(500).json({ ok: false, message: 'Database connection failed' })
   }
 })
+
 app.get('/api/classes', async (req, res) => {
   try {
     const result = await pool.query('select * from classes order by id')
@@ -46,6 +58,7 @@ app.get('/api/memberships', async (req, res) => {
     res.status(500).json({ message: 'Could not load memberships' })
   }
 })
+
 const port = process.env.PORT || 3000
 
 app.listen(port, () => {
