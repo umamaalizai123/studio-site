@@ -5,7 +5,7 @@ import Gallery from './components/Gallery'
 import TrainersSection from './components/TrainersSection'
 import Footer from './components/Footer'
 import MembershipSection from './components/MembershipSection'
-
+import AuthSection from './components/AuthSection'
 export default function App() {
   return (
     <div className="min-h-screen bg-blush text-ink">
@@ -16,6 +16,7 @@ export default function App() {
          <Gallery />
          <TrainersSection />
          <MembershipSection />
+         <AuthSection />
       </main>
       <Footer />
     </div>
