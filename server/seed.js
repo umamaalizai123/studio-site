@@ -73,8 +73,7 @@ const memberships = [
 
 async function seed() {
   // Start fresh so the script can be run again safely
-  await pool.query('drop table if exists classes, trainers, memberships')
-
+ await pool.query('drop table if exists bookings, classes, trainers, memberships')
   await pool.query(`
     create table classes (
       id serial primary key,
@@ -85,6 +84,16 @@ async function seed() {
       instructor text not null,
       spots integer not null
     )
+       `)
+        await pool.query(`
+    create table bookings (
+      id serial primary key,
+      user_id text not null references "user"(id) on delete cascade,
+      class_id integer not null references classes(id) on delete cascade,
+      spots integer not null check (spots > 0),
+      unique (user_id, class_id)
+    )
+  
   `)
 
   await pool.query(`
